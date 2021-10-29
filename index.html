@@ -7,9 +7,17 @@
     <title>Password Generator</title>
 </head>
 <body class="bg-dark">
-    <div class="card position-absolute top-50 start-50 translate-middle">
-        <div class="card-body">
-          This is some text within a card body.
+    <div class="card position-absolute top-50 start-50 translate-middle ">
+        <div class="card-body" id="generated-password">
+            Generate a password.
+            <button class="btn btn-primary" type="submit">Generate</button>
+            <br>
+            <label for="customRange3" class="form-label">Length: </label>
+            <input type="range" 
+                   class="form-range" 
+                   min="8" max="100" 
+                   step="1" 
+                   id="pass-len">
         </div>
       </div>
 
