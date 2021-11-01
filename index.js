@@ -1,7 +1,11 @@
-generatedPassword = document.getElementById('generated-password');
-passLen = document.getElementById('pass-len').value;
-displayLen = document.getElementById('display-len');
-render()
+const generatedPassword = document.getElementById('generated-password');
+const passLen = document.getElementById('pass-len');
+const displayLen = document.getElementById('display-len');
+
+passLen.oninput = (() => {
+    let value = passLen.value;
+    displayLen.textContent = "Length: " + value;
+});
 
 function generatePass() {
     let str = 'ABCDEGFHIGKLMNOPQRSTUVWXYZ'
@@ -34,8 +38,3 @@ function displayPass() {
     }
 }
 displayPass()
-
-function render() {
-    displayLen.textContent = "Length: " + passLen;
-}
-render()
