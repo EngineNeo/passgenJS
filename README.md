@@ -5,4 +5,5 @@ A simple but useful password generation tool made with Javascript and styled wit
 ### TO-DO
 - [ ] Add dictionary to for word generation
 - [ ] Make Switches default
+- [ ] Copy to clipboard button
 - [X] Switches to change options
