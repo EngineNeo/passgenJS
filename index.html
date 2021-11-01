@@ -7,25 +7,41 @@
     <title>Password Generator</title>
 </head>
 <body class="bg-dark">
-    <div class="card position-absolute top-50 start-50 translate-middle ">
+    <div class="card position-absolute top-50 start-50 translate-middle w-25">
         <div class="card-body">
-            <p id="generated-password">Generate a Password.</p>
+            <p class="text-center" 
+               id="generated-password">Generate a Password.
+            </p>
             <button class="btn btn-primary" 
                     type="submit" 
                     id="generate">
                     Generate
             </button>
             <br>
-            <label for="customRange3" 
-                   class="form-label" 
-                   id="display-len">Length: 
-            </label>
-            <input type="range" 
-                   class="form-range" 
-                   min="8" max="100" 
-                   step="1"
-                   value="8"
-                   id="pass-len"/>
+            <div class="accordion accordion-flush" 
+                 id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Advanced
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <label for="customRange3" 
+                                   class="form-label" 
+                                   id="display-len">Length: 8
+                            </label>
+                            <input type="range" 
+                                   class="form-range" 
+                                   min="8" max="100" 
+                                   step="1"
+                                   value="8"
+                                   id="pass-len"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
 

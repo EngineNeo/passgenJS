@@ -8,23 +8,28 @@ passLen.oninput = (() => {
     displayLen.textContent = "Length: " + value;
 });
 
+// Func generating password string
 function generatePass() {
-    let str = 'ABCDEGFHIGKLMNOPQRSTUVWXYZ'
-    let specialChar = '!@#$%^&*?=-'
-    let char = ''
-    let pass = ''
+    let str = 'ABCDEGFHIGKLMNOPQRSTUVWXYZ' //alphabet for gen
+    let specialChar = '!@#$%^&*?=-' //special chars for gen
+    let pass = '' // empty variable for pass
 
     function randomInt(max) {
         return Math.floor(Math.random() * max)
     }
 
+    //Looping to get the password
     for(i = 0; i < passLen.value; i++) {
-        strorSpecial = randomInt(2)
-        if (strorSpecial == 1){
+        strorSpecial = randomInt(3)
+        if (strorSpecial == 1){ //Uppercase char (0.33)
             char = randomInt(str.length) + 1;
             pass += str.charAt(char);
         }
-        else if (strorSpecial == 0) {
+        else if (strorSpecial == 2) { //Lowercase char (0.33)
+            char = randomInt(str.length) + 1;
+            pass += str.charAt(char).toLowerCase();
+        }
+        else if (strorSpecial == 0) { //Special char (0.33)
             char = randomInt(specialChar.length) + 1;
             pass += specialChar.charAt(char);
         }
@@ -32,7 +37,7 @@ function generatePass() {
     return pass
 }
 
-
+//Displaying newely generated password
 function displayPass() {
     generateButton.onclick = () => {
         generatedPassword.textContent = generatePass()
