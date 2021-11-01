@@ -1,6 +1,7 @@
 const generatedPassword = document.getElementById('generated-password');
 const passLen = document.getElementById('pass-len');
 const displayLen = document.getElementById('display-len');
+const generateButton = document.getElementById('generate')
 
 passLen.oninput = (() => {
     let value = passLen.value;
@@ -17,7 +18,7 @@ function generatePass() {
         return Math.floor(Math.random() * max)
     }
 
-    for(i = 0; i < passLen; i++) {
+    for(i = 0; i < passLen.value; i++) {
         strorSpecial = randomInt(2)
         if (strorSpecial == 1){
             char = randomInt(str.length) + 1;
@@ -31,7 +32,7 @@ function generatePass() {
     return pass
 }
 
-generateButton = document.getElementById('generate')
+
 function displayPass() {
     generateButton.onclick = () => {
         generatedPassword.textContent = generatePass()
