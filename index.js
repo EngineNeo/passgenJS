@@ -1,3 +1,7 @@
+//TO-DO
+
+//ADD OPTIONS FOR CHAR/SPECIALCHAR
+
 const generatedPassword = document.getElementById('generated-password');
 const passLen = document.getElementById('pass-len');
 const displayLen = document.getElementById('display-len');
@@ -7,6 +11,11 @@ passLen.oninput = (() => {
     let value = passLen.value;
     displayLen.textContent = "Length: " + value;
 });
+
+// Toggles for used char
+const upperChar = document.getElementById('uppercase')
+const lowerChar = document.getElementById('lowercase')
+const specialcharSwitch = document.getElementById('special-char')
 
 // Func generating password string
 function generatePass() {

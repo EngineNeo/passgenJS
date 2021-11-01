@@ -7,7 +7,7 @@
     <title>Password Generator</title>
 </head>
 <body class="bg-dark">
-    <div class="card position-absolute top-50 start-50 translate-middle w-25">
+    <div class="card position-absolute top-50 start-50 translate-middle w-50">
         <div class="card-body">
             <p class="text-center" 
                id="generated-password">Generate a Password.
@@ -21,12 +21,21 @@
             <div class="accordion accordion-flush" 
                  id="accordionFlushExample">
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    <h2 class="accordion-header" 
+                        id="flush-headingOne">
+                        <button class="accordion-button collapsed" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#flush-collapseOne" 
+                                aria-expanded="false" 
+                                aria-controls="flush-collapseOne">
                             Advanced
                         </button>
                     </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div id="flush-collapseOne" 
+                         class="accordion-collapse collapse" 
+                         aria-labelledby="flush-headingOne" 
+                         data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <label for="customRange3" 
                                    class="form-label" 
@@ -38,6 +47,20 @@
                                    step="1"
                                    value="8"
                                    id="pass-len"/>
+                            <form class="row g-3">
+                                <div class="form-check form-switch col-auto mx-auto">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="uppercase" checked>
+                                    <label class="form-check-label" for="flexSwitchCheckChecked">Uppercase</label>
+                                  </div>
+                                  <div class="form-check form-switch col-auto mx-auto">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="lowercase">
+                                    <label class="form-check-label">Lowercase</label>
+                                  </div>
+                                  <div class="form-check form-switch col-auto mx-auto">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="special-char">
+                                    <label class="form-check-label">Special Characters</label>
+                                  </div>
+                            </form>
                         </div>
                     </div>
                 </div>
