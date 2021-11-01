@@ -1,6 +1,6 @@
-generatedPassword = document.getElementById('generated-password')
-passLen = document.getElementById('pass-len')
-displayLen = document.getElementById('display-len')
+generatedPassword = document.getElementById('generated-password');
+passLen = document.getElementById('pass-len').value;
+displayLen = document.getElementById('display-len');
 render()
 
 function generatePass() {
@@ -16,12 +16,12 @@ function generatePass() {
     for(i = 0; i < passLen; i++) {
         strorSpecial = randomInt(2)
         if (strorSpecial == 1){
-            char = randomInt(str.length) + 1
-            pass += str.charAt(char)
+            char = randomInt(str.length) + 1;
+            pass += str.charAt(char);
         }
         else if (strorSpecial == 0) {
-            char = randomInt(specialChar.length) + 1
-            pass += specialChar.charAt(char)
+            char = randomInt(specialChar.length) + 1;
+            pass += specialChar.charAt(char);
         }
     }
     return pass
@@ -30,13 +30,12 @@ function generatePass() {
 generateButton = document.getElementById('generate')
 function displayPass() {
     generateButton.onclick = () => {
-        // generatedPassword.textContent = generatePass()
-        console.log(generatePass())
+        generatedPassword.textContent = generatePass()
     }
 }
 displayPass()
 
 function render() {
-    displayLen.textContent = passLen
+    displayLen.textContent = "Length: " + passLen;
 }
 render()
