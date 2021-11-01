@@ -10,14 +10,22 @@
     <div class="card position-absolute top-50 start-50 translate-middle ">
         <div class="card-body" id="generated-password">
             Generate a password.
-            <button class="btn btn-primary" type="submit">Generate</button>
+            <button class="btn btn-primary" 
+                    type="submit" 
+                    id="generate">
+                    Generate
+            </button>
             <br>
-            <label for="customRange3" class="form-label">Length: </label>
+            <label for="customRange3" 
+                   class="form-label" 
+                   id="display-len">Length: 
+            </label>
             <input type="range" 
                    class="form-range" 
                    min="8" max="100" 
-                   step="1" 
-                   id="pass-len">
+                   step="1"
+                   value="8"
+                   id="pass-len"/>
         </div>
       </div>
 
